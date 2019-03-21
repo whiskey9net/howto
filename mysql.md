@@ -1,6 +1,7 @@
 ### Cheat Sheet
 ```mysql
 -- USERS ------------------------------------------------------------------------------
+
 CREATE USER 'username'@'%'         IDENTIFIED BY 'passwrod';
 CREATE USER 'username'@'localhost' IDENTIFIED BY 'passwrod';
  
@@ -17,7 +18,8 @@ GRANT ALL PRIVILEGES ON * . * TO 'newuser'@'localhost';
  
 FLUSH PRIVILEGES;
 
--- DB ---------------------------------------------------------------------------------
+-- DATABASES AND TABLES --------------------------------------------------------------
+
 -- Truncate table (drop and then re-create again (including any indexes and constraints)
 TRUNCATE [TABLE] tbl_name
  
