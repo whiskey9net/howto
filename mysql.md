@@ -1,21 +1,25 @@
 ### Cheat Sheet
 ```mysql
-mysql> CREATE USER 'username'@'%'         IDENTIFIED BY 'passwrod';
-mysql> CREATE USER 'username'@'localhost' IDENTIFIED BY 'passwrod';
+-- USERS ------------------------------------------------------------------------------
+CREATE USER 'username'@'%'         IDENTIFIED BY 'passwrod';
+CREATE USER 'username'@'localhost' IDENTIFIED BY 'passwrod';
  
-mysql> ALTER USER 'username'@'localhost' IDENTIFIED BY 'passwrod';
+ALTER USER 'username'@'localhost' IDENTIFIED BY 'passwrod';
   -- or
-mysql> SET PASSWORD FOR 'username'@'localhost' ='passwrod'
+SET PASSWORD FOR 'username'@'localhost' ='passwrod'
+
+SELECT User, Host FROM mysql.user;
+
+CREATE DATABASE mydb;
  
-mysql> CREATE DATABASE mydb;
- 
-mysql> GRANT ALL PRIVILEGES ON * . * TO 'newuser'@'localhost';
+GRANT ALL PRIVILEGES ON * . * TO 'newuser'@'localhost';
   -- The asterisks in this command refer to the database and table (respectively).
  
-mysql> FLUSH PRIVILEGES;
- 
+FLUSH PRIVILEGES;
+
+-- DB ---------------------------------------------------------------------------------
 -- Truncate table (drop and then re-create again (including any indexes and constraints)
-mysql> TRUNCATE [TABLE] tbl_name
+TRUNCATE [TABLE] tbl_name
  
-mysql> UPDATE mytable SET field1 = newvalue1, field2 = newvalue2 [WHERE Clause];
+UPDATE mytable SET field1 = newvalue1, field2 = newvalue2 [WHERE Clause];
 ```
