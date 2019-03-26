@@ -1,5 +1,5 @@
 ### Cheat Sheet
-```mysql
+```
 -- USERS ------------------------------------------------------------------------------
 
 CREATE USER 'username'@'%'         IDENTIFIED BY 'passwrod';
