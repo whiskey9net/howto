@@ -12,4 +12,9 @@ source vars
 ./build-key-server server
 ./build-dh
 openvpn --genkey --secret keys/ta.key
+
+cp keys/{server.crt,server.key,ca.crt,dh2048.pem,ta.key} /etc/openvpn
+
+# client
+source vars && ./build-key client
 ```
