@@ -16,6 +16,7 @@ GRANT ALL PRIVILEGES ON * . * TO 'newuser'@'localhost';
  
 FLUSH PRIVILEGES;
 
+
 -- DATABASES AND TABLES --------------------------------------------------------------
 
 CREATE DATABASE mydb;
