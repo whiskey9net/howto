@@ -1,2 +1,6 @@
 
-GPG_FILE=`ls $GPG_DIR/*.gpg` || { echo "err: no gpg file found."; exit 1; }
+GPG_FILE=`ls ${GPG_DIR}/*.gpg` || { echo "err: no gpg file found."; exit 1; }
+GPG_FILE=`basename ${GPG_FILE} |awk '{print $1}'`
+
+split -b 4G ${GPG_FILE} ${GPG_FILE}_
+s3cmd put ${GPG_FILE}_?? s3://my_bucket/
