@@ -1,0 +1,2 @@
+
+GPG_FILE=`ls $GPG_DIR/*.gpg` || { echo "err: no gpg file found."; exit 1; }
