@@ -5,4 +5,8 @@ GPG_FILE=`basename ${GPG_FILE} |awk '{print $1}'`
 split -b 4G ${GPG_FILE} ${GPG_FILE}_
 s3cmd put ${GPG_FILE}_?? s3://my_bucket/
 
+
+
+tar cvSf sparse_file.tar sparse_file                     # <--- tar sparse file
+
 ---
