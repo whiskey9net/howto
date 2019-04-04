@@ -9,4 +9,8 @@ s3cmd put ${GPG_FILE}_?? s3://my_bucket/
 
 tar cvSf sparse_file.tar sparse_file                     # <--- tar sparse file
 
+
+docker swarm init --advertise-addr 172.30.1.11
+
+docker swarm join-token manager
 ---
