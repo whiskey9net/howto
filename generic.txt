@@ -29,7 +29,7 @@ if [[ ! -z "$VAR" ]]; then echo "VAR is not empty!"; fi
 
 DIR=some_dir/
 echo $(realpath -s $DIR)    # -s   - don't expand symlinks
-# output: /tmp/somedir
+# output: /tmp/some_dir
 
 
 --- BASH COLORS -------------------------------------------------------------------------------------------------------------
