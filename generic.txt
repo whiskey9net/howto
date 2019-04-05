@@ -35,6 +35,7 @@ echo $(realpath -s $DIR)    # -s   - don't expand symlinks
 --- BASH COLORS -------------------------------------------------------------------------------------------------------------
 
 RED='\033[0;31m'
+GREEN='\033[0;32m'
 NC='\033[0m'                # No Color
 echo -e "${RED}love${NC}"   # -e   - enable interpretation of backslash escapes
 
