@@ -17,22 +17,14 @@ wavemon
                                                         BASH
 *****************************************************************************************************************************
 
-if [[ -f /tmp/foo.txt ]]; then
-    echo "File found!"
-fi
+if [[   -f /tmp/foo.txt ]]; then echo "File found!";     fi
+if [[ ! -f /tmp/foo.txt ]]; then echo "File not found!"; fi
 
-if [[ ! -f /tmp/foo.txt ]]; then
-    echo "File not found!"
-fi
+if [[   -d /tmp/dir ]]; then echo "Dir found!";     fi
+if [[ ! -d /tmp/dir ]]; then echo "Dir not found!"; fi
 
-
-if [[ -z "$VAR" ]]; then
-   echo "VAR is empty!"
-fi
-
-if [[ ! -z "$VAR" ]]; then
-   echo "VAR is not empty!"
-fi
+if [[   -z "$VAR" ]]; then echo "VAR is empty!";     fi
+if [[ ! -z "$VAR" ]]; then echo "VAR is not empty!"; fi
 
 
 *****************************************************************************************************************************
