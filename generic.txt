@@ -8,7 +8,7 @@ s3cmd put ${GPG_FILE}_?? s3://my_bucket/
 
 
 tar cvSf sparse_file.tar sparse_file                     # <--- tar sparse file
-
+ssh 10.20.30.40 "tar cvf - /backup/ | gzip -c1" | gunzip -c |sudo tar xvf -
 
 wavemon
 
