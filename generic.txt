@@ -160,6 +160,10 @@ rs.reconfig(cfg)
 > db.users.insert({username:"john",password:"123456"})
 > db.users.find()
 
+> show dbs                   – List all databases.
+> use db_name                – Switches to db_name.
+> show collections           – List all tables in the current selected database.
+
 
 *****************************************************************************************************************************
                                                       SYSTEMD
