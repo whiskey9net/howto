@@ -130,4 +130,36 @@ rvm get stable
 rvm install ruby-2.6.1 --without-binary
 
 
+*****************************************************************************************************************************
+                                                      MONGODB
+*****************************************************************************************************************************
+
+rs.status();
+rs.conf();
+
+rs.initiate( {
+   _id : "rs0",
+   members: [
+      { _id: 0, host: "mongodb0.example.net:27017" },
+      { _id: 1, host: "mongodb1.example.net:27017" },
+      { _id: 2, host: "mongodb2.example.net:27017" }
+   ]
+})
+
+rs.add( { host: "mongodb3.example.net:27017", priority: 0, votes: 0 } )
+
+var cfg = rs.conf();
+cfg.members[4].priority = 1
+cfg.members[4].votes = 1
+rs.reconfig(cfg)
+
+
+*****************************************************************************************************************************
+                                                      SYSTEMD
+*****************************************************************************************************************************
+
+systemctl daemon-reload
+systemctl start name.service
+
+
 ---
