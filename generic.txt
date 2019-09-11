@@ -77,14 +77,6 @@ GRANT ALL PRIVILEGES ON * . * TO 'newuser'@'localhost';
 FLUSH PRIVILEGES;
 
 
-// To enable error log add following
-
-[mysqld_safe]
-log_error=/var/log/mysql/mysql_error.log
-[mysqld]
-log_error=/var/log/mysql/mysql_error.log
-
-
 --- DATABASES AND TABLES ----------------------------------------------------------------------------------------------------
 
 CREATE DATABASE mydb;
